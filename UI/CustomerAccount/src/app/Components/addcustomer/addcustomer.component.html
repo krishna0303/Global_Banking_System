@@ -1,0 +1,155 @@
+<!-- <div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">Opening Customer Account</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form>
+                            <div class="form-group pt-3">
+                                <input formControlName="AccountNo" type="text" placeholder="Account Number">
+                            </div>
+                          <small
+                                *ngIf="customerForm.controls['AccountNo'].dirty && customerForm.hasError('required','AccountNo')"
+                                class="text-danger"> Password is required </small> -->
+
+<!-- <div class="form-group pt-3"> -->
+<!-- <label>Customer Number: </label>&nbsp;&nbsp;
+                                <select id="CustomerNo" name="CustomerNo" value="Customer Number">
+                                    <option value="101">101</option>
+                                    <option value="102 ">102</option>
+
+                                    <option value="103">103</option>
+
+                                    <option value="104">104</option>
+
+                                    <option value="105">105</option>
+
+                                    <option value="106">106</option>
+                                    <option value="107">107</option>
+                                    <option value="108">108</option>
+                                    <option value="109">109</option>
+                                    <option value="110">110</option>
+
+
+
+                                </select> -->
+<!-- <input formControlName="CustomerNo" type="number" placeholder="Customer Number">
+                            </div> -->
+<!-- <small
+                                *ngIf="customerForm.controls['CustomerNo'].dirty && customerForm.hasError('required','CustomerNo')"
+                                class="text-danger">CustomerNo is required</small> -->
+<!-- <div class="form-group pt-3">
+                                <input formControlName="BranchId" type="text" placeholder="Branch Id">
+                            </div> -->
+<!-- <small
+                                *ngIf="customerForm.controls['BranchId'].dirty && customerForm.hasError('required','BranchId')"
+                                class="text-danger"> BranchId is required </small> -->
+
+<!-- <div class="form-group pt-3">
+                                <input formControlName="Balance" type="number" placeholder="Opening Balance" min="5000">
+                            </div> -->
+<!-- <small
+                                *ngIf="customerForm.controls['Balance'].dirty && customerForm.hasError('required','Balance')"
+                                class="text-danger"> Balance is required </small> -->
+<!-- <small *ngIf="customerForm.hasError('min','Balance') " class="text-danger">Opening Balance
+                                should be minimum of Rs.5000 </small> -->
+
+<!-- <div class="form-group pt-3">
+                                <label for="OpeningDate">Opening Date :</label>
+                                <input formControlName="OpeningDate" type="date" placeholder="Opening Date">
+
+                            </div> -->
+<!-- <small
+                                *ngIf="customerForm.controls['OpeningDate'].dirty && customerForm.hasError('required','OpeningDate')"
+                                class="text-danger"> OpeningDate is required </small> -->
+<!-- <br><label for="status">Account Status : </label>&nbsp;
+                            <input type="radio" id="status" name="Account status" value="Active" checked>&nbsp;
+                            <label for="status">Active </label>&nbsp;
+                            <input type="radio" id="status" name="Account status" value="Inactive" unchecked
+                                disabled="true">&nbsp;
+                            <label for="status">InActive </label><br>
+
+
+                            <button (click)="Add()" type="submit" class="btn btn-primary btn-block mt-4 w-100">Add
+                                Customer</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+<div class="container">
+    <h1>Enter Customer Account Details</h1>
+    <table>
+        <tr>
+            <td>
+                <form #form="ngForm" (ngSubmit)="onSubmit()">
+                    <!-- <div>
+                        <label>AccountNo</label><label class="validation-error hide" id="fullNameValidationError">This
+                            field
+                            is
+                            required.</label>
+                        <input type="text" name="accountNo" id="accountNo" [(ngModel)]="customer.accountNumber">
+                    </div> -->
+                    <div>
+                        <label>CustomerNo</label>
+                        <input type="text" name="customerNo" id="customerNo" [(ngModel)]="customer.customerNumber">
+                    </div>
+                    <div>
+                        <label>BranchId:</label>
+                        <input type="text" name="branchId" id="branchId" [(ngModel)]="customer.branchId">
+                        <!-- <label for="lang">Language</label> 
+<select name="branchId" id="branchId" [(ngModel)]="customer.branchId">
+                            <option value="1">JavaScript</option>
+                            <option value="2">PHP</option>
+                            <option value="3">Java</option>
+                            <option value="4">Golang</option>
+                            <option value="5">Python</option>
+                            <option value="6">C#</option>
+
+                        </select>  -->
+                    </div>
+                    <div>
+                        <label>Balance</label>
+                        <input type="text" name="balance" id="balance" [(ngModel)]="customer.openingBalance">
+                    </div>
+                    <div>
+                        <label>OpeningDate</label>
+                        <input type="text" name="openingDate" id="openingDate"
+                            [(ngModel)]="customer.accountOpeningDate">
+                    </div>
+                    <!-- <br><label for="status">Account Status : </label>&nbsp;
+                    <input type="radio" id="status" name="Account status" value="Active" checked>&nbsp;
+                    <label for="status">Active </label>&nbsp;
+                    <input type="radio" id="status" name="Account status" value="Inactive" unchecked
+                        disabled="true">&nbsp;
+                    <label for="status">InActive </label><br> -->
+                    <div>
+                        <label>AccountType</label>
+                        <input type="text" name="accountType" id="accountType" [(ngModel)]="customer.accountType">
+                    </div>
+                    <div>
+                        <label>AccountStatus</label>
+                        <input type="text" name="accountStatus" id="accountStatus" [(ngModel)]="customer.accountStatus">
+                    </div>
+
+                    <div class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+
+        </tr>
+    </table>
+</div>
+<router-outlet></router-outlet>
